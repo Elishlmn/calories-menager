@@ -1,4 +1,5 @@
-// schema.js
+// Eli Shulman 316040120
+// Shahar Ashkenazi 316244060
 
 const mongoose = require('mongoose');
 
