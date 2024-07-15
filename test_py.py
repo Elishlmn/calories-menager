@@ -3,7 +3,7 @@ import sys
 
 
 filename = input("filename=")
-line = "http://localhost:3000"
+line = "https://calories-menager.onrender.com"
 output = open(filename,"w")
 sys.stdout = output
 print(line)
@@ -24,8 +24,7 @@ try:
    print("firstname="+data.json()[0]["firstname"])
    print("lastname="+data.json()[0]["lastname"])
    print("id="+str(data.json()[0]["id"]))
-   text = text + data.json()[0]["firstname"] + " " + data.json()[0]["lastname"] + " "
-   + str(data.json()[0]["id"])
+   text = text + data.json()[0]["firstname"] + " " + data.json()[0]["lastname"] + " "+ str(data.json()[0]["id"])
    print(text)
 except Exception as e:
    print("problem")
