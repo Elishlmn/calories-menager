@@ -150,14 +150,4 @@ router.get('/about', (req, res) => {
     res.json(developers);
 });
 
-router.get('/test-db', async (req, res) => {
-    try {
-      const users = await User.find().limit(1);
-      res.json({ message: 'Database connection successful', users });
-    } catch (error) {
-      console.error('Database connection error:', error);
-      res.status(500).json({ error: 'Database connection failed', details: error.message });
-    }
-  });
 
-module.exports = router;
